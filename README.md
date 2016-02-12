@@ -29,7 +29,18 @@ In the `require` key of `composer.json` file add the following
 
 Run the Composer update comand
 
-    $ composer update
+    $ composer update nitmedia/wkhtml2pdf
+    
+#### L5
+
+In your `config/app.php` add `'Nitmedia\Wkhtml2pdf\L5Wkhtml2pdfServiceProvider'` to the end of the `$providers` array
+
+    'providers' => array(
+        ...
+        'Nitmedia\Wkhtml2pdf\L5Wkhtml2pdfServiceProvider',
+    ),
+    
+#### L4
 
 In your `config/app.php` add `'Nitmedia\Wkhtml2pdf\Wkhtml2pdfServiceProvider'` to the end of the `$providers` array
 
@@ -75,6 +86,7 @@ Version: [0.12.1-rc][2]
 
 	1. Some users have noted a strange permissions issue executing the drivers. Try chmod'ing the driver files to solve the issue.
 	2. All asset urls must be absolute, relative urls wont work.
+	3. ***Ubuntu users*** you need to do => apt-get install libxrender1 libxext6
 
 
 The MIT License (MIT)
